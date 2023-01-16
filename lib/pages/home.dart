@@ -125,298 +125,611 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              'BALANCE',
-              style: TextStyle(fontSize: 15),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  'KSH. 0.00',
-                  style: Theme.of(context).textTheme.headline4,
-                ),
-                const SizedBox(
-                  width: 5,
-                ),
-                const Icon(
-                  Icons.remove_red_eye_outlined,
-                  color: Colors.black,
-                ),
-              ],
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            const Text(
-              'AVAILABLE FULIZA: KSH 4,500',
-              style: TextStyle(fontSize: 15),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Column(
-                  children: const [
-                    CircleAvatar(
-                      backgroundColor: Colors.green,
-                      child: Icon(
-                        Icons.compare_arrows_rounded,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'SEND AND REQUEST',
-                      style: TextStyle(fontSize: 10),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  width: mediaQwidth * 0.09,
-                ),
-                Column(
-                  children: const [
-                    CircleAvatar(
-                      backgroundColor: Colors.blue,
-                      child: Icon(
-                        Icons.money,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'PAY',
-                      style: TextStyle(fontSize: 10),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  width: mediaQwidth * 0.1,
-                ),
-                Column(
-                  children: const [
-                    CircleAvatar(
-                      backgroundColor: Colors.red,
-                      child: Icon(
-                        Icons.money_off,
-                        color: Colors.white,
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Text(
-                      'WITHDRAW',
-                      style: TextStyle(fontSize: 10),
-                    )
-                  ],
-                ),
-                SizedBox(
-                  width: mediaQwidth * 0.1,
-                ),
-                Column(
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.blue[200],
-                      child: const Icon(
-                        Icons.phone,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 10),
-                    const Text(
-                      'AIRTIME',
-                      style: TextStyle(fontSize: 10),
-                    )
-                  ],
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
-                    'M-PESA STATEMENTS',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  Text(
-                    'SEE ALL',
-                    // selectionColor: Colors.green,
-                    style: TextStyle(
-                      fontSize: 15,
-                      color: Colors.green,
-                    ),
-                  )
-                ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            // Column is also a layout widget. It takes a list of children and
+            // arranges them vertically. By default, it sizes itself to fit its
+            // children horizontally, and tries to be as tall as its parent.
+            //
+            // Invoke "debug painting" (press "p" in the console, choose the
+            // "Toggle Debug Paint" action from the Flutter Inspector in Android
+            // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
+            // to see the wireframe for each widget.
+            //
+            // Column has various properties to control how it sizes itself and
+            // how it positions its children. Here we use mainAxisAlignment to
+            // center the children vertically; the main axis here is the vertical
+            // axis because Columns are vertical (the cross axis would be
+            // horizontal).
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              const SizedBox(
+                height: 20,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              const Text(
+                'BALANCE',
+                style: TextStyle(fontSize: 15),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    children: [
-                      const CircleAvatar(
-                        child: Text('EA'),
-                      ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text('OTOMATIK SOLUTIONS LTD'),
-                          Text('xxxxxxx'),
-                        ],
-                      ),
-                    ],
+                  Text(
+                    'KSH. 0.00',
+                    style: Theme.of(context).textTheme.headline4,
                   ),
                   const SizedBox(
-                    width: 10,
+                    width: 5,
+                  ),
+                  const Icon(
+                    Icons.remove_red_eye_outlined,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'AVAILABLE FULIZA: KSH 4,500',
+                style: TextStyle(fontSize: 15),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        child: Icon(
+                          Icons.compare_arrows_rounded,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'SEND AND REQUEST',
+                        style: TextStyle(fontSize: 10),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    width: mediaQwidth * 0.09,
                   ),
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: const [
-                      Text('- KSH 55,000'),
-                      Text('15 Jan 10:20AM'),
+                      CircleAvatar(
+                        backgroundColor: Colors.blue,
+                        child: Icon(
+                          Icons.money,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'PAY',
+                        style: TextStyle(fontSize: 10),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    width: mediaQwidth * 0.1,
+                  ),
+                  Column(
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.red,
+                        child: Icon(
+                          Icons.money_off,
+                          color: Colors.white,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        'WITHDRAW',
+                        style: TextStyle(fontSize: 10),
+                      )
+                    ],
+                  ),
+                  SizedBox(
+                    width: mediaQwidth * 0.1,
+                  ),
+                  Column(
+                    children: [
+                      CircleAvatar(
+                        backgroundColor: Colors.blue[200],
+                        child: const Icon(
+                          Icons.phone,
+                          color: Colors.white,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        'AIRTIME',
+                        style: TextStyle(fontSize: 10),
+                      )
                     ],
                   )
                 ],
               ),
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
-                child: Text('SUGGESTED FOR YOU'),
+              const SizedBox(
+                height: 50,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'M-PESA STATEMENTS',
+                      style: TextStyle(fontSize: 15),
+                    ),
+                    Text(
+                      'SEE ALL',
+                      // selectionColor: Colors.green,
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.green,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        width: 230,
-                        height: 130,
-                        color: Colors.green[100],
-                        child: Stack(
+                    Row(
+                      children: [
+                        const CircleAvatar(
+                          child: Text('EA'),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: const [
-                            Positioned(
-                              top: 10,
-                              left: 10,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                child: Icon(
-                                  Icons.book,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              top: 10,
-                              right: 30,
-                              child: Text('Advert'),
-                            )
+                            Text('OTOMATIK SOLUTIONS LTD'),
+                            Text('xxxxxxx'),
                           ],
                         ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: const [
+                        Text('- KSH 55,000'),
+                        Text('15 Jan 10:20AM'),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                  child: Text('SUGGESTED FOR YOU'),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Container(
+                          width: 230,
+                          height: 130,
+                          color: Colors.green[100],
+                          child: Stack(
+                            children: const [
+                              Positioned(
+                                top: 10,
+                                left: 10,
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  child: Icon(
+                                    Icons.book,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 10,
+                                right: 30,
+                                child: Text('Advert'),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: Container(
+                          width: 230,
+                          height: 130,
+                          color: Colors.green[100],
+                          child: Stack(
+                            children: const [
+                              Positioned(
+                                top: 10,
+                                left: 10,
+                                child: CircleAvatar(
+                                  backgroundColor: Colors.white,
+                                  child: Icon(
+                                    Icons.book,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                top: 10,
+                                right: 30,
+                                child: Text('Advert'),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                  child: Text('FREQUENT SERVICES'),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                child: Row(
+                  children: [
+                    Column(
+                      children: const [
+                        CircleAvatar(
+                          child: Text('ME'),
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Madaraka Express')
+                      ],
                     ),
                     const SizedBox(
                       width: 20,
                     ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        width: 230,
-                        height: 130,
-                        color: Colors.green[100],
-                        child: Stack(
-                          children: const [
-                            Positioned(
-                              top: 10,
-                              left: 10,
-                              child: CircleAvatar(
-                                backgroundColor: Colors.white,
-                                child: Icon(
-                                  Icons.book,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              top: 10,
-                              right: 30,
-                              child: Text('Advert'),
-                            )
-                          ],
+                    Column(
+                      children: const [
+                        CircleAvatar(
+                          child: Text('HF'),
                         ),
-                      ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Hustler Fund')
+                      ],
                     ),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
-                child: Text('FREQUENT SERVICES'),
+              const SizedBox(
+                height: 30,
               ),
-            ),
-          ],
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                  child: Text('CATEGORIES'),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                          width: 120,
+                          height: 50,
+                          color: Colors.grey[300],
+                          child: Row(
+                            children: const [
+                              CircleAvatar(
+                                child: Icon(
+                                  Icons.event,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text('EVENTS')
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                          width: 160,
+                          height: 50,
+                          color: Colors.grey[300],
+                          child: Row(
+                            children: const [
+                              CircleAvatar(
+                                backgroundColor: Colors.green,
+                                child: Icon(
+                                  Icons.travel_explore,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Text('TRAVEL & LOCAL')
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          padding: const EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                          width: 140,
+                          height: 50,
+                          color: Colors.grey[300],
+                          child: Row(
+                            children: [
+                              CircleAvatar(
+                                backgroundColor: Colors.grey[700],
+                                child: const Icon(
+                                  Icons.school,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 10,
+                              ),
+                              const Text('EDUCATION')
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'SERVICES',
+                      style: TextStyle(fontSize: 15),
+                    ),
+                    Text(
+                      'SEE ALL',
+                      // selectionColor: Colors.green,
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.green,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5.0),
+                  color: Colors.white,
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0.0, 1.0), //(x,y)
+                      blurRadius: 6.0,
+                    ),
+                  ],
+                ),
+                width: mediaQwidth * 0.91,
+                height: 300,
+                child: Column(
+                  children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('PR'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('PRUDENTIAL')
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('NH'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('MY NHIF')
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('ME'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('MADARAKA EXPRESS')
+                          ],
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('MO'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('MOOKH')
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('IA'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('IABIRI APP')
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('KA'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('KODRIS AFRICA')
+                          ],
+                        )
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('MP'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('MPOST APP')
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('EZ'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('EZAWADI')
+                          ],
+                        ),
+                        Column(
+                          children: const [
+                            CircleAvatar(
+                              child: Text('MD'),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text('MDAKTARI')
+                          ],
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+            ],
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

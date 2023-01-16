@@ -255,7 +255,160 @@ class MyHomePage extends StatelessWidget {
                   ],
                 )
               ],
-            )
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Text(
+                    'M-PESA STATEMENTS',
+                    style: TextStyle(fontSize: 15),
+                  ),
+                  Text(
+                    'SEE ALL',
+                    // selectionColor: Colors.green,
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.green,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 0, 12, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      const CircleAvatar(
+                        child: Text('EA'),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('OTOMATIK SOLUTIONS LTD'),
+                          Text('xxxxxxx'),
+                        ],
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: const [
+                      Text('- KSH 55,000'),
+                      Text('15 Jan 10:20AM'),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                child: Text('SUGGESTED FOR YOU'),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        width: 230,
+                        height: 130,
+                        color: Colors.green[100],
+                        child: Stack(
+                          children: const [
+                            Positioned(
+                              top: 10,
+                              left: 10,
+                              child: CircleAvatar(
+                                backgroundColor: Colors.white,
+                                child: Icon(
+                                  Icons.book,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 10,
+                              right: 30,
+                              child: Text('Advert'),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 20,
+                    ),
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        width: 230,
+                        height: 130,
+                        color: Colors.green[100],
+                        child: Stack(
+                          children: const [
+                            Positioned(
+                              top: 10,
+                              left: 10,
+                              child: CircleAvatar(
+                                backgroundColor: Colors.white,
+                                child: Icon(
+                                  Icons.book,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                            Positioned(
+                              top: 10,
+                              right: 30,
+                              child: Text('Advert'),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Padding(
+                padding: EdgeInsets.fromLTRB(10.0, 0, 0, 0),
+                child: Text('FREQUENT SERVICES'),
+              ),
+            ),
           ],
         ),
       ),
